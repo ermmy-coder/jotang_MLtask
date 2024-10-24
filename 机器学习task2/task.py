@@ -10,7 +10,7 @@ from torch.utils.data import DataLoader
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # TODO:解释参数含义，在?处填入合适的参数
-batch_size = 64
+batch_size = 32
 #作答：即批量大小，是一次处理的数据量大小。
 #过大：速度快但模型精度下降。
 #过小：速度慢。
@@ -90,7 +90,7 @@ def train():
             _, predicted = torch.max(outputs.data, 1)
             total += labels.size(0)
             correct += (predicted == labels).sum().item()
-
+           
         accuracy = 100 * correct / total
         print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {running_loss / len(trainloader):.4f}, Accuracy: {accuracy:.2f}%')
 
