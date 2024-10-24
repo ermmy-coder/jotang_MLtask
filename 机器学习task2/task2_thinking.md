@@ -32,6 +32,29 @@
 - 误差：交叉熵损失函数
 - 优化：sgd
 
+### 3. 调参过程
+**初始参数**：
+- batch_size = 128
+- learning_rate =0.01
+- 结果：![第一次训练结果](第一次运行结果，batch=128，ir=0.01.png)
+
+1. batch_size = 64，learning_rate =3
+>调大lr，调小batch
+Epoch [1/10], Loss: 2.3211, Accuracy: 10.11%
+Epoch [2/10], Loss: 2.2426, Accuracy: 13.84%
+Epoch [3/10], Loss: 1.9727, Accuracy: 26.45%
+Epoch [4/10], Loss: 1.7437, Accuracy: 35.86%
+Epoch [5/10], Loss: 1.5924, Accuracy: 41.81%
+Epoch [6/10], Loss: 1.4997, Accuracy: 45.52%
+Epoch [7/10], Loss: 1.4249, Accuracy: 48.42%
+Epoch [8/10], Loss: 1.3562, Accuracy: 50.87%
+Epoch [9/10], Loss: 1.3027, Accuracy: 52.98%
+Epoch [10/10], Loss: 1.2398, Accuracy: 54.98%
+Accuracy of the model on the 10000 test images: 45.03%
+
+>目前还没有调整到比此更准确的参数
+
+
 ### 所遇问题：
 1. **问题**：没有注意卷积之后图片输出shape会改变。
 **解决方案**：应该为`in-kernnel_size+1`

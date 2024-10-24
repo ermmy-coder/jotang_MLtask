@@ -10,11 +10,11 @@ from torch.utils.data import DataLoader
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # TODO:解释参数含义，在?处填入合适的参数
-batch_size = 128
+batch_size = 64
 #作答：即批量大小，是一次处理的数据量大小。
 #过大：速度快但模型精度下降。
 #过小：速度慢。
-learning_rate =0.01
+learning_rate = 3
 #作答：即学习率，可以抽象地理解为每次调整权重时的程度，走到最佳权重点每一步地步长。
 #学习率过低：调整幅度小。
 #学习率过高：容易偏离目标。
