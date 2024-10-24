@@ -37,6 +37,7 @@
 - batch_size = 128
 - learning_rate =0.01
 - 结果：![第一次训练结果](第一次运行结果，batch=128，ir=0.01.png)
+>这个地方有个小插曲：在git 的过程中某次reset之后就全部回退到最初版本（即没有结果版本）了，而且加了--hard，以为找不回来了，全部还重新练过一套数据。
 
 1. batch_size = 64，learning_rate =3
 >调大lr，调小batch
